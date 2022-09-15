@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+:root{
+    --Dark-Violet: hsl(256, 26%, 20%);
+    --Grayish-Blue: hsl(216, 30%, 68%);
+    --Very-Dark-Violet: hsl(270, 9%, 17%);
+    --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body{
+    background-color: brown;
+}
+
+.mobile-nav{
+    display: none;
+}
+
+.mobile-img-container{
+    display: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header ul li a{
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 400;
+}
+
+header .desktop-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 70px;
+}
+
+.desktop-nav ul{
+    display: flex;
+    gap: 1.5em;
+}
+
+main{
+    font-family: 'Karla', sans-serif;
+}
+
+.first-section{
+    display: flex;
+    flex-direction: row;
+    gap: .8em;
+    width: 100%;
+    background-image: url(images/bg-pattern-intro-left-desktop.svg), url(images/bg-pattern-intro-right-desktop.svg);
+    background-size: contain;
+    background-position: left bottom, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-color: var(--Dark-Violet);
+    background-blend-mode: normal;
+}
+
+.section-text{
+    width: 50%;
+    margin: auto;
+    padding-left: 70px;
+}
+
+.section-text h1{
+    color: white;
+}
+
+.section-text p{
+    color: white;
+}
+
+.section-text button{
+    width: 30%;
+    border: 1px solid white;
+    color: white;
+    padding: 7px;
+    background-color: inherit;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.desktop-img-container{
+    width: 50%;
+}
+
+.desktop-img-container img{
+    width: 80%;
+    margin-bottom: -80px;
+}
+
+.second-section{
+    margin-top: 3.5em;
+    padding: 40px 70px;
+}
+
+.sub-container{
+    display: grid;
+    grid-template-columns: auto, auto, auto;
+    grid-template-areas: "first-item second-item third-item";
+    grid-column-gap: 1em;
+}
+
+.outcast{
+    padding: 25px 0px;
+    font-weight: 700;
+}
+
+.last-section{
+    border: 1px solid white;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    header .desktop-nav{
+        display: none;
+    }
+
+    .desktop-img-container{
+        display: none;
+    }
+
+    .close-button{
+        display: none;
+    }
+
+    header .mobile-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .first-section{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background: none;
+    }
+
+    .section-text{
+        width: 100%;
+        margin: auto;
+        padding: 0px 10px;
+        text-align: center;
+        background-image: url(images/bg-pattern-intro-left-mobile.svg), url(images/bg-pattern-intro-right-mobile.svg);
+        background-size: contain;
+        background-position: left bottom, right top;
+        background-repeat: no-repeat, no-repeat;
+        background-color: var(--Dark-Violet);
+        background-blend-mode: normal;
+    }
+    
+    .mobile-img-container{
+        display: block;
+        width: 100%;
+    }
+
+    .mobile-img-container img{
+        width: 100%;
+    }
+
+    .second-section{
+        margin-top: 3.5em;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    
+    .sub-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
